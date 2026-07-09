@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG7.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG8.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG9.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG10.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Please Me/IMG11.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_please_me">
+            <img src="./IMAGENES/AUDIOVISUAL/Please Me titulo.png" alt="">
+            <div class="proyecto_subtitulo?_please_me">
+                <h2>Video musical</h2>
+                <h2>Dirección - Guion - Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Please Me es un videoclip ambientado en una Buenos Aires nocturna, donde dos personas intentan encontrarse para una cita. Sin embargo, un imprevisto impide que una de ellas llegue.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La propuesta visual buscó capturar la esencia de la ciudad durante la noche: las luces urbanas, el movimiento constante del tránsito, los edificios y la atmósfera característica de Buenos Aires se convierten en parte del relato, reforzando el tono cinematográfico del proyecto.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>Como director participé en todas las etapas de la producción audiovisual. Además de la dirección en rodaje, desarrollé el guion literario y el guion técnico, y estuve a cargo de la postproducción, incluyendo el montaje, la corrección de color y la integración de efectos visuales. La edición fue realizada íntegramente en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_descripcion_4">
+            <h2>El videoclip fue producido para Kova Studio como un proyecto destinado a ampliar la experiencia del equipo y fortalecer el portfolio de la productora, explorando una propuesta narrativa y estética con un enfoque cinematográfico.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Dirección</li>
+                <li>Guion literario</li>
+                <li>Guion tecnico</li>
+                <li>Montaje</li>
+                <li>Corrección de color</li>
+                <li>Efectos visuales (VFX)</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Cliente: Kova Studio (proyecto interno)</li>
+                <li>Fecha: Abril de 2026</li>
+                <li>Categoria: Video musical</li>
+                <li>Objetivo: Desarrollo de experiencia y ampliación del portfolio de la productora.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/bj57IZyaItM/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bj57IZyaItM?si=bJ2yCsSzRN7OG4Xu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

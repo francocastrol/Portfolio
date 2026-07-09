@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Amaizing SpiderMan 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spiderman 2/IMG7.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spiderman 2/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spiderman 2/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spiderman 2/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spiderman 2/IMG5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spiderman 2/IMG6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spiderman 2/IMG1.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_tasm2">
+            <img src="./IMAGENES/AUDIOVISUAL/The Amaizing Spider Man 2 titulo.png" alt="">
+            <div class="proyecto_subtitulo_tasm2">
+                <h2>Trailer</h2>
+                <h2>Dirección creativa - Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Este proyecto consiste en un tráiler conceptual de la película The Amazing Spider-Man 2, desarrollado como un ejercicio de edición con el objetivo de profundizar en el lenguaje del tráiler cinematográfico. La propuesta busca reinterpretar el material original mediante un nuevo enfoque narrativo, priorizando la construcción de tensión y el impacto emocional por encima del relato completo de la película.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La edición fue diseñada a partir de una banda sonora cuidadosamente seleccionada, utilizando el ritmo de la música como eje principal del montaje. La combinación de cortes rápidos, pausas en negro, cambios de intensidad y una progresión narrativa gradual permite generar expectativa y mantener la atención del espectador, acompañando el crecimiento de la tensión hasta el desenlace del tráiler.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>El proyecto fue realizado íntegramente por mí. Me encargué de la selección de la música, la organización del material, la construcción del ritmo narrativo y el montaje completo, explorando distintos recursos de edición para recrear el estilo característico de los avances cinematográficos. Todo el proceso de postproducción fue realizado en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Montaje</li>
+                <li>Dirección creativa</li>
+                <li>Selección de planos</li>
+                <li>Investigación y selección de material</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Tipo: Proyecto personal</li>
+                <li>Fecha: Marzo de 2022</li>
+                <li>Categoría: Tráiler conceptual</li>
+                <li>Objetivo: Desarrollo de experiencia y ampliación del portfolio mediante la creación de un tráiler con enfoque cinematográfico.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/ovhiAzYcWuc/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ovhiAzYcWuc?si=K_gMnWHJ0JPTcy93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

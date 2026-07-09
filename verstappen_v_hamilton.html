@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verstappen v Hamilton</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG8.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Verstappen V Hamilton/IMG7.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_verstappen_v_hamilton">
+            <img src="./IMAGENES/AUDIOVISUAL/F1 2021 titulo.png" alt="">
+            <div class="proyecto_subtitulo_verstappen_v_hamilton">
+                <h2>Edit</h2>
+                <h2>Dirección creativa - Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Este proyecto es un edit cinematográfico centrado en la histórica lucha por el Campeonato Mundial de Formula 1 de 2021 entre Max Verstappen y Lewis Hamilton. A través de una narrativa cronológica, la pieza recorre los momentos más representativos de la temporada, mostrando cómo la rivalidad entre ambos pilotos fue creciendo hasta convertirse en una de las disputas más intensas de la historia reciente del deporte.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La edición comienza contextualizando el dominio que Mercedes y Lewis Hamilton habían ejercido durante los años anteriores, para luego introducir la irrupción de Max Verstappen como un verdadero contendiente al título. A partir de ese punto, el montaje acompaña la evolución del campeonato mediante las principales batallas en pista, los adelantamientos, los accidentes y los momentos de mayor presión, utilizando una versión de My Way, de Frank Sinatra, como hilo conductor de la narrativa.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>La propuesta visual buscó combinar un enfoque cinematográfico con el lenguaje propio del documental deportivo. El ritmo de la música guía la progresión de la historia, alternando momentos de calma con secuencias de alta intensidad para enfatizar la tensión, la competitividad y el dramatismo que caracterizaron aquella temporada. Más que un simple resumen, el objetivo fue transmitir las emociones de una rivalidad que mantuvo el campeonato abierto hasta la última vuelta de la última carrera.</h2>
+        </div>
+        <div class="proyecto_descripcion_4">
+            <h2>El proyecto fue desarrollado íntegramente por mí. Me encargué de la investigación, la selección del material, la construcción de la narrativa, la elección de la música y el montaje completo. Para ello utilicé imágenes provenientes de distintas fuentes, entre ellas la cuarta temporada de Drive to Survive, el canal oficial de Formula 1 y las retransmisiones de las carreras de la temporada 2021. Toda la edición fue realizada en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Dirección creativa</li>
+                <li>Investigación y selección de material</li>
+                <li>Montaje</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Tipo: Proyecto personal</li>
+                <li>Fecha: Agosto de 2025</li>
+                <li>Categoría: Edit</li>
+                <li>Objetivo: Desarrollo de experiencia y ampliación del portfolio mediante una reinterpretación cinematográfica de la temporada 2021 de Formula 1.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/yWD0XqMQRlw/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yWD0XqMQRlw?si=EM6WaFJ1j7sYbmHX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

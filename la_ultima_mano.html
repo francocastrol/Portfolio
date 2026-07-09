@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ultima Mano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/La Ultima Mano/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/La Ultima Mano/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/La Ultima Mano/IMG3.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_la_ultima_mano">
+            <img src="./IMAGENES/AUDIOVISUAL/La Ultima Mano titulo.png" alt="">
+            <div class="proyecto_subtitulo_la_ultima_mano">
+                <h2>Cortometraje</h2>
+                <h2>Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>La Última Mano es un cortometraje desarrollado en el marco de un proyecto académico, ambientado en una partida de póker clandestina donde dos jugadores apuestan hasta quedarse sin nada. La historia propone un relato de tensión creciente, condensando el conflicto y el desenlace en un formato de apenas un minuto de duración.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La propuesta narrativa estuvo enfocada en demostrar cómo una historia completa puede construirse en un tiempo muy reducido, utilizando el montaje, la puesta en escena y el ritmo de la edición para generar suspenso desde el primer plano. La iluminación, los encuadres cerrados y la ambientación contribuyen a reforzar el clima clandestino y la intensidad de la partida.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>Mi función principal fue la de montajista, siendo responsable del ritmo narrativo y de la construcción de la tensión durante la postproducción. Además, participé como asistente de dirección durante el rodaje y colaboré en la etapa de preproducción con el desarrollo del guion. Todo el proceso de edición fue realizado en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_descripcion_4">
+            <h2>El cortometraje fue producido como trabajo práctico para la Tecnicatura en Multimedios del Colegio La Salle San Martín, representando una experiencia de formación orientada a la narrativa audiovisual y al trabajo colaborativo dentro de un equipo de producción.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Montaje</li>
+                <li>Corrección de color</li>
+                <li>Asistente de dirección</li>
+                <li>Desarrollo de guion</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Cliente: Tecnicatura en Multimedios – Colegio La Salle San Martín</li>
+                <li>Fecha: Septiembre de 2023</li>
+                <li>Categoria: Cortometraje</li>
+                <li>Objetivo: Trabajo práctico académico orientado a la narrativa audiovisual en formato breve.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/3JTHJUVAPR0/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3JTHJUVAPR0?si=MkNoitjpmQ1ilota" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

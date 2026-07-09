@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take My Mind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Take My Mind/IMG 1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take My Mind/IMG 5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take My Mind/IMG 7.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take My Mind/IMG 2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take My Mind/IMG 6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take My Mind/IMG 4.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_take_my_mind">
+            <img src="./IMAGENES/AUDIOVISUAL/Take My Mind titulo.png" alt="">
+            <div class="proyecto_subtitulo_take_my_mind">
+                <h2>Video musical</h2>
+                <h2>Dirección - Guion - Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Take My Mind es un videoclip que transforma una simple partida de ping pong entre dos amigos en una experiencia frenética y exagerada. A medida que avanza la canción, el enfrentamiento adquiere una intensidad cada vez mayor, convirtiendo una situación cotidiana en un espectáculo cargado de energía y dinamismo.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La propuesta visual estuvo orientada a transmitir ese ritmo vertiginoso mediante una combinación de movimientos de cámara amplios, una puesta en escena dinámica y un montaje acelerado. Cada decisión de edición fue pensada para acompañar la intensidad de la canción y mantener un flujo visual que potenciara el impacto de cada plano.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>Como director participé en todas las etapas de la producción audiovisual. Además de dirigir el rodaje, desarrollé el guion literario y el guion técnico, y estuve a cargo de la postproducción, incluyendo el montaje, la corrección de color y la integración de efectos visuales. La edición fue realizada íntegramente en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_descripcion_4">
+            <h2>El videoclip fue producido para Kova Studio como un proyecto destinado a ampliar la experiencia del equipo y fortalecer el portfolio de la productora, explorando una propuesta visual en la que el ritmo de la edición y el lenguaje cinematográfico son protagonistas.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Dirección</li>
+                <li>Guion literario</li>
+                <li>Guion tecnico</li>
+                <li>Montaje</li>
+                <li>Corrección de color</li>
+                <li>Efectos visuales (VFX)</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Cliente: Kova Studio (proyecto interno)</li>
+                <li>Fecha: Marzo de 2026</li>
+                <li>Categoria: Video musical</li>
+                <li>Objetivo: Desarrollo de experiencia y ampliación del portfolio de la productora.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/L6Mh4Vf3FH4/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L6Mh4Vf3FH4?si=__IvCGmvw7jywKvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

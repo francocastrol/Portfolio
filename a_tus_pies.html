@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Tus Pies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG7.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies/IMG8.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_a_tus_pies">
+            <img src="./IMAGENES/AUDIOVISUAL/A Tus Pies titulo.png" alt="">
+            <div class="proyecto_subtitulo_a_tus_pies">
+                <h2>Video musical</h2>
+                <h2>Guion - Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>A Tus Pies es un videoclip para la banda Zinedie, desarrollado a partir de una presentación de la banda sobre la terraza de un edificio. La propuesta combina la interpretación musical con una puesta en escena urbana, utilizando el entorno como parte de la identidad visual del proyecto.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La dirección visual buscó transmitir la fuerza y la energía de la canción a través de un montaje dinámico, movimientos de cámara expresivos y una edición sincronizada con el ritmo musical. La intención fue potenciar la intensidad propia del rock, manteniendo un flujo visual constante que acompañara cada cambio de la canción y reforzara el impacto de la interpretación de la banda.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>Dentro del proyecto participé en el desarrollo del guion técnico y estuve a cargo de la postproducción, realizando el montaje y la integración de efectos visuales. Todo el proceso de edición fue realizado en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_descripcion_4">
+            <h2>El videoclip fue producido por Kova Studio para la banda Zinedie, consolidando una propuesta audiovisual enfocada en resaltar la presencia escénica del grupo y traducir la energía de su música a un lenguaje cinematográfico.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Guion tecnico</li>
+                <li>Montaje</li>
+                <li>Efectos visuales (VFX)</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Cliente: Zinedie</li>
+                <li>Productora: Kova Studio</li>
+                <li>Fecha: Junio de 2026</li>
+                <li>Categoria: Video musical</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/L6Mh4Vf3FH4/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L6Mh4Vf3FH4?si=__IvCGmvw7jywKvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

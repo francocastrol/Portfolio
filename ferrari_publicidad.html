@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG7.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG8.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG9.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG10.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG11.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG12.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Ferrari publicidad/IMG13.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_ferrari">
+            <img src="./IMAGENES/AUDIOVISUAL/Ferrari titulo.png" alt="">
+            <div class="proyecto_subtitulo_ferrari">
+                <h2>Spot publicitario</h2>
+                <h2>Dirección creativa - Montaje - Guion</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Este proyecto es un spot publicitario conceptual desarrollado como un homenaje a la historia de la escudería Ferrari dentro de la Formula 1. La pieza propone un recorrido por las distintas etapas del equipo, desde sus primeros años hasta la actualidad, repasando algunos de sus campeones, momentos más emblemáticos y períodos de éxito y adversidad.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La propuesta busca construir una experiencia emocional más que informativa. A través de un montaje cinematográfico, una narración en voz en off y una progresión visual que acompaña el paso del tiempo, el video intenta transmitir el legado de Ferrari como una de las instituciones más representativas del automovilismo.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>El proyecto fue desarrollado íntegramente por mí. Me encargué de la investigación y selección del material audiovisual, la escritura del guion de la narración, la construcción del montaje y la edición final. La voz en off fue generada mediante inteligencia artificial a partir de un texto original escrito por mí, buscando recrear el tono inspirador característico de las campañas publicitarias deportivas. Todo el proceso de edición fue realizado en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Montaje</li>
+                <li>Dirección creativa</li>
+                <li>Selección de planos</li>
+                <li>Investigación y selección de material</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Tipo: Proyecto personal</li>
+                <li>Fecha: Diciembre de 2025</li>
+                <li>Categoría: Spot publicitario conceptual</li>
+                <li>Objetivo: Desarrollo de experiencia y ampliación del portfolio mediante la creación de una pieza publicitaria de enfoque cinematográfico.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/UzLXMlHNIxQ/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UzLXMlHNIxQ?si=wuTLp1EPfbkmgSvd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

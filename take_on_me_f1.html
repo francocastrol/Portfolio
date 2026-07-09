@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take On Me X F1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG7.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG8.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG9.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG10.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG11.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Take On Me X F1/IMG12.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_take_on_me">
+            <img src="./IMAGENES/AUDIOVISUAL/F1 X Take On Me titulo.png" alt="">
+            <div class="proyecto_subtitulo_take_on_me">
+                <h2>Trailer</h2>
+                <h2>Dirección creativa - Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Este proyecto consiste en un tráiler conceptual inspirado en la Formula 1, desarrollado a partir de imágenes de la serie Drive to Survive, principalmente de su quinta temporada. La propuesta reinterpreta el material original con un enfoque cinematográfico, utilizando una versión de la canción Take On Me para construir una narrativa emocional que combina velocidad, tensión y espectáculo.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>El objetivo fue capturar la esencia de la máxima categoría del automovilismo, transmitiendo tanto la adrenalina de las carreras como la intensidad que se vive dentro y fuera de la pista. A través de un montaje cuidadosamente sincronizado con la música, cambios progresivos de ritmo y una selección precisa de planos, el tráiler busca generar una experiencia que evoque la expectativa previa a una gran carrera, alternando momentos de calma con explosiones de energía e impacto visual.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>El proyecto fue desarrollado íntegramente por mí. Me encargué de la selección del material, la elección de la banda sonora, la construcción del ritmo narrativo y el montaje final, explorando diferentes recursos de edición para potenciar el carácter cinematográfico de la pieza y demostrar cómo el montaje puede transformar material existente en una nueva propuesta audiovisual.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Montaje</li>
+                <li>Dirección creativa</li>
+                <li>Selección de planos</li>
+                <li>Diseño del ritmo narrativo</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Tipo: Proyecto personal</li>
+                <li>Fecha: Diciembre de 2023</li>
+                <li>Categoría: Tráiler conceptual</li>
+                <li>Objetivo: Desarrollo de experiencia y ampliación del portfolio mediante una reinterpretación cinematográfica de la Formula 1.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/vefX5JQu8aQ/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vefX5JQu8aQ?si=hxBDfC4Wc41BtxP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

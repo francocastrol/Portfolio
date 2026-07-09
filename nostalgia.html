@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Nostalgia/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Nostalgia/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Nostalgia/IMG3.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_nostalgia">
+            <img src="./IMAGENES/AUDIOVISUAL/Nostagia titulo.png" alt="">
+            <div class="proyecto_subtitulo_nostalgia">
+                <h2>Trailer</h2>
+                <h2>Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Nostalgia es un tráiler realizado para un cortometraje de terror producido por estudiantes de un curso superior de la Tecnicatura en Multimedios del Colegio La Salle San Martín. El proyecto consistió en desarrollar una pieza promocional a partir de material ya filmado, con el objetivo de generar expectativa sin revelar los momentos clave de la historia.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>Como punto de partida se nos proporcionó una selección de planos autorizados para utilizar y la banda sonora del tráiler. A partir de esos elementos, el desafío fue construir una narrativa atractiva mediante el montaje, definiendo el ritmo, la organización de los planos y el diseño de los títulos para potenciar el impacto de la pieza.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>La propuesta de edición buscó generar una sensación constante de tensión, aprovechando la música como eje principal del montaje. El uso de pausas en negro, silencios breves y cambios de ritmo permitió incrementar el suspenso de forma progresiva, manteniendo la atención del espectador hasta el plano final.</h2>
+        </div>
+        <div class="proyecto_descripcion_4">
+            <h2>Todo el proceso de edición fue realizado en Adobe Premiere Pro. El proyecto fue desarrollado como parte de la Tecnicatura en Multimedios del Colegio La Salle San Martín, representando un ejercicio enfocado en el lenguaje del tráiler y en la construcción de expectativa a través del montaje.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Montaje</li>
+                <li>Diseño del ritmo narrativo</li>
+                <li>Diseño de títulos</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Cliente: Tecnicatura en Multimedios – Colegio La Salle San Martín</li>
+                <li>Fecha: Julio de 2023</li>
+                <li>Categoria: Tráiler cinematográfico</li>
+                <li>Objetivo: Trabajo práctico enfocado en la construcción de tensión y expectativa mediante el lenguaje del tráiler.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/_c4Sj67uvOA/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_c4Sj67uvOA?si=3G2FhyL_FJ2NIkcv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

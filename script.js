@@ -1,31 +1,35 @@
 const roles = [
-    "Editor de video",
+    "Edición de video",
     "Diseño gráfico",
     "Diseño web",
 ];
 
 const rol = document.getElementById("rol");
 
-let i = 0;
+if (rol) {
 
-function cambiarRol(){
+    let i = 0;
 
-    rol.classList.add("wipe");
+    function cambiarRol(){
 
-    setTimeout(() => {
+        rol.classList.add("wipe");
 
-        i = (i + 1) % roles.length;
-        rol.textContent = roles[i];
+        setTimeout(() => {
 
-    },400);
+            i = (i + 1) % roles.length;
+            rol.textContent = roles[i];
 
-    setTimeout(() => {
-        rol.classList.remove("wipe");
-    },800);
+        }, 400);
+
+        setTimeout(() => {
+            rol.classList.remove("wipe");
+        }, 800);
+
+    }
+
+    setInterval(cambiarRol, 3000);
 
 }
-
-setInterval(cambiarRol,3000);
 
 // -------------------------
 // LIGHTBOX

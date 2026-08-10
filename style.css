@@ -11,6 +11,7 @@ body {
   margin-left: 100px;
 }
 
+
 /* =======================================================================================INDEX=================================================================================================== */
 
 /*_________________________________________________________________________________________NAV_____________________________________________________________________________________________*/
@@ -179,7 +180,7 @@ nav{
   font-size:clamp(70px,9vw,150px);
   font-weight:700;
   line-height:.9;
-  letter-spacing:-5px;
+  letter-spacing:-2px;
 }
 
 .roles_inicio{
@@ -194,7 +195,7 @@ nav{
   width:260px;
   height:1px;
   background:#ffffff;
-  margin-left:50px;
+  margin-left:5px;
 }
 
 .roles_inicio h2{
@@ -203,7 +204,7 @@ nav{
   display:inline-block;
   margin:0;
   color:#fff;
-  font-size:32px;
+  font-size:30px;
   font-weight:300;
   letter-spacing:1px;
 }
@@ -253,7 +254,6 @@ nav{
   justify-content:space-between;
   padding:0 10%;
   background: #0f0f0f;
-  gap:100px;
 }
 
 .presentacion_imagen{
@@ -264,7 +264,7 @@ nav{
 
 .presentacion_imagen img{
   width:100%;
-  max-width:520px;
+  max-width:700px;
   object-fit:cover;
 }
 
@@ -388,6 +388,363 @@ nav{
 .categoria:hover h1{
   color:#23d4ef;
   letter-spacing:8px;
+}
+
+/*________________________________________________________________________________________CONTACTOS________________________________________________________________________________________*/
+
+.contactos{
+    min-height:40vh;
+    background:#111111;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 10%;
+}
+
+.contactos h1{
+    color:white;
+    font-size:clamp(60px,6vw,110px);
+    margin-bottom:25px;
+    letter-spacing:-2px;
+}
+
+.contactos p{
+    color:#bcbcbc;
+    font-size:22px;
+    max-width:750px;
+    line-height:1.7;
+}
+
+.contactos_iconos{
+    display:flex;
+    gap:45px;
+    margin-top:70px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.contactos_iconos a{
+    position:relative;
+    width:55px;
+    height:55px;
+}
+
+.contactos_iconos img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    transition:.35s ease;
+}
+
+.contactos_iconos .gris{
+    opacity:1;
+}
+
+.contactos_iconos .celeste{
+    opacity:0;
+}
+
+.contactos_iconos a:hover .gris{
+    opacity:0;
+    transform:scale(1.25);
+}
+
+.contactos_iconos a:hover .celeste{
+    opacity:1;
+    transform:scale(1.25);
+}
+
+
+.footer p{
+    color:#666;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+/* =======================================================================================
+                         RESPONSIVE - CELULAR
+======================================================================================= */
+
+@media (max-width: 768px){
+
+    /* =====================================================
+                        GENERAL
+    ===================================================== */
+
+    html{
+        scroll-padding-top:80px;
+    }
+
+    body{
+        margin-left:0;
+        overflow-x:hidden;
+    }
+
+
+    /* =====================================================
+                          NAV
+    ===================================================== */
+
+    nav{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:70px;
+
+        padding:0 18px;
+
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+
+        z-index:1000;
+    }
+
+
+    /* =======================
+            LOGO
+    ======================= */
+
+    .logo_nav{
+        width:55px;
+        height:55px;
+        flex-shrink:0;
+    }
+
+    .logo_nav img{
+        width:100%;
+        height:100%;
+        margin-top:0;
+    }
+
+
+    /* =======================
+             MENÚ
+    ======================= */
+
+    .menus_nav{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+
+        gap:18px;
+        margin:0;
+    }
+
+    .menus_nav a{
+        writing-mode:horizontal-tb;
+        transform:none;
+
+        color:#fff;
+        font-size:13px;
+        font-weight:600;
+        letter-spacing:.5px;
+        white-space:nowrap;
+    }
+
+    .menus_nav a:hover{
+        color:#00fffc;
+        transform:scale(1.05);
+    }
+
+
+    /* =======================
+          REDES SOCIALES
+    ======================= */
+
+    .social_nav{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .mail_nav{
+        width:24px;
+        height:24px;
+    }
+
+
+    /* =====================================================
+                         INICIO
+    ===================================================== */
+
+    .inicio{
+        min-height:100vh;
+
+        padding:0 25px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .inicio_contenido{
+        width:100%;
+        align-items:flex-start;
+    }
+
+    .nombre_inicio h1{
+        font-size:clamp(52px,14vw,90px);
+        line-height:.95;
+        letter-spacing:-3px;
+    }
+
+    .roles_inicio{
+        margin-top:25px;
+        margin-left:3px;
+        width:100%;
+    }
+
+    .roles_inicio h2{
+        width:auto;
+        font-size:22px;
+        letter-spacing:.5px;
+        white-space:nowrap;
+    }
+
+    .roles_inicio::after{
+        width:100%;
+        max-width:100px;
+    }
+
+
+    /* =====================================================
+                       PRESENTACIÓN
+    ===================================================== */
+
+    .presentacion{
+        min-height:auto;
+
+        display:flex;
+        flex-direction:column;
+
+        justify-content:center;
+        align-items:center;
+
+        padding:100px 25px;
+        gap:50px;
+    }
+
+    .presentacion_imagen{
+        width:100%;
+    }
+
+    .presentacion_imagen img{
+        width:100%;
+        max-width:500px;
+        height:auto;
+    }
+
+    .presentacion_info{
+        width:100%;
+        max-width:650px;
+
+        align-items:flex-start;
+    }
+
+    .presentacion_info h1{
+        font-size:clamp(50px,13vw,80px);
+        letter-spacing:-2px;
+    }
+
+    .presentacion_info h2{
+        margin-top:25px;
+
+        font-size:17px;
+        line-height:1.7;
+    }
+
+    .btn_cv{
+        margin-top:30px;
+        padding:15px 30px;
+        font-size:16px;
+    }
+
+    .btn_cv span{
+        font-size:24px;
+    }
+
+
+    /* =====================================================
+                         PROYECTOS
+    ===================================================== */
+
+    .proyectos{
+        min-height:100vh;
+    }
+
+    .categoria{
+        min-height:50vh;
+        flex:none;
+    }
+
+    .categoria h1{
+        text-align:center;
+        font-size:clamp(38px,10vw,65px);
+        letter-spacing:2px;
+        padding:0 20px;
+    }
+
+    .categoria:hover h1{
+        letter-spacing:4px;
+    }
+
+
+    /* =====================================================
+                         CONTACTOS
+    ===================================================== */
+
+    .contactos{
+        min-height:auto;
+
+        padding:100px 25px;
+    }
+
+    .contactos h1{
+        font-size:clamp(45px,12vw,75px);
+        line-height:1;
+        letter-spacing:-2px;
+
+        margin-bottom:25px;
+    }
+
+    .contactos p{
+        font-size:17px;
+        line-height:1.7;
+        max-width:600px;
+    }
+
+    .contactos_iconos{
+        gap:35px;
+        margin-top:50px;
+    }
+
+    .contactos_iconos a{
+        width:45px;
+        height:45px;
+    }
+
+
+    /* =====================================================
+                           FOOTER
+    ===================================================== */
+
+    .footer{
+        padding:25px 20px;
+        text-align:center;
+    }
+
+    .footer p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
 }
 
 /* =======================================================================================AUDIOVISUAL=================================================================================================== */
@@ -690,6 +1047,127 @@ nav{
 
 .prueba_9:hover .prueba_9_fondo {
   filter: grayscale(100%);
+}
+
+/* =======================================================================================
+                         RESPONSIVE - AUDIOVISUAL
+======================================================================================= */
+
+@media (max-width: 768px){
+
+    /* =====================================================
+                         CONTENEDOR
+    ===================================================== */
+
+    .trabajos{
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+
+    /* =====================================================
+                       FILAS
+    ===================================================== */
+
+    .trabajos_fila_1,
+    .trabajos_fila_2,
+    .trabajos_fila_3{
+
+        padding: 0 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        margin-top: 0;
+    }
+
+
+    /* =====================================================
+                     TARJETAS / PROYECTOS
+    ===================================================== */
+
+    .prueba_1,
+    .prueba_2,
+    .prueba_3,
+    .prueba_4,
+    .prueba_5,
+    .prueba_6,
+    .prueba_7,
+    .prueba_8,
+    .prueba_9{
+
+        width: 100%;
+        max-width: 600px;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+                     IMAGEN DE FONDO
+    ===================================================== */
+
+    .prueba_1_fondo,
+    .prueba_2_fondo,
+    .prueba_3_fondo,
+    .prueba_4_fondo,
+    .prueba_5_fondo,
+    .prueba_6_fondo,
+    .prueba_7_fondo,
+    .prueba_8_fondo,
+    .prueba_9_fondo{
+
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /* =====================================================
+                     TÍTULOS
+    ===================================================== */
+
+    .prueba_1_titulo,
+    .prueba_2_titulo,
+    .prueba_3_titulo,
+    .prueba_4_titulo,
+    .prueba_5_titulo,
+    .prueba_6_titulo,
+    .prueba_7_titulo,
+    .prueba_8_titulo,
+    .prueba_9_titulo{
+
+        width: 80%;
+        max-width: 500px;
+    }
+
+
+    /* =====================================================
+                         HOVER
+    ===================================================== */
+
+    .prueba_1:hover,
+    .prueba_2:hover,
+    .prueba_3:hover,
+    .prueba_4:hover,
+    .prueba_5:hover,
+    .prueba_6:hover,
+    .prueba_7:hover,
+    .prueba_8:hover,
+    .prueba_9:hover{
+
+        transform: scale(1.02);
+    }
+
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 
@@ -1118,6 +1596,518 @@ nav{
   color: white;
   cursor: pointer;
 }
+
+/* =======================================================================================
+   RESPONSIVE - CELULAR
+======================================================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       CONTENEDOR GENERAL
+    ========================= */
+
+    body {
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       NAV
+    ========================= */
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 70px;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 20px;
+
+        z-index: 1000;
+    }
+
+    .logo_nav {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo_nav img {
+        margin-top: 0;
+    }
+
+    .social_nav {
+        margin-left: auto;
+    }
+
+    .mail_nav {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* =========================
+       TRABAJOS
+    ========================= */
+
+    .trabajos {
+        margin-top: 100px;
+        margin-bottom: 3rem;
+    }
+
+
+    /* =========================
+       FILAS
+    ========================= */
+
+    .trabajos_fila_1,
+    .trabajos_fila_2,
+    .trabajos_fila_3 {
+
+        padding: 0 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       TARJETAS
+    ========================= */
+
+    .prueba_1,
+    .prueba_2,
+    .prueba_3,
+    .prueba_4,
+    .prueba_5,
+    .prueba_6,
+    .prueba_7,
+    .prueba_8,
+    .prueba_9 {
+
+        width: 100%;
+        max-width: 500px;
+
+        transform: none !important;
+    }
+
+
+    /* Evitamos que el hover de PC
+       genere problemas en celular */
+
+    .prueba_1:hover,
+    .prueba_2:hover,
+    .prueba_3:hover,
+    .prueba_4:hover,
+    .prueba_5:hover,
+    .prueba_6:hover,
+    .prueba_7:hover,
+    .prueba_8:hover,
+    .prueba_9:hover {
+
+        transform: none;
+    }
+
+
+    /* =========================
+       IMÁGENES DE FONDO
+    ========================= */
+
+    .prueba_1_fondo,
+    .prueba_2_fondo,
+    .prueba_3_fondo,
+    .prueba_4_fondo,
+    .prueba_5_fondo,
+    .prueba_6_fondo,
+    .prueba_7_fondo,
+    .prueba_8_fondo,
+    .prueba_9_fondo {
+
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* =========================
+       TÍTULOS
+    ========================= */
+
+    .prueba_1_titulo,
+    .prueba_2_titulo,
+    .prueba_3_titulo,
+    .prueba_4_titulo,
+    .prueba_5_titulo,
+    .prueba_6_titulo,
+    .prueba_7_titulo,
+    .prueba_8_titulo,
+    .prueba_9_titulo {
+
+        width: 80%;
+        max-width: 400px;
+    }
+
+}
+
+/* =======================================================================================
+   RESPONSIVE - PÁGINAS DE PROYECTOS
+======================================================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       BODY
+    ========================= */
+
+    body {
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       NAV
+    ========================= */
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 70px;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 20px;
+
+        z-index: 1000;
+    }
+
+    .logo_nav {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo_nav img {
+        margin-top: 0;
+    }
+
+    .social_nav {
+        margin-left: auto;
+    }
+
+    .mail_nav {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* =========================
+       CARRUSEL
+    ========================= */
+
+    .proyecto_imagenes {
+        margin-top: 70px;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 65vw;
+        max-height: 500px;
+        min-height: 250px;
+    }
+
+    .carousel_track {
+        height: 100%;
+    }
+
+    .carousel_img {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
+    /* =========================
+       BOTONES CARRUSEL
+    ========================= */
+
+    .carousel_btn {
+        width: 40px;
+        height: 40px;
+
+        font-size: 22px;
+    }
+
+    .carousel_btn.prev {
+        left: 10px;
+    }
+
+    .carousel_btn.next {
+        right: 10px;
+    }
+
+
+    /* =========================
+       DESCRIPCIÓN
+    ========================= */
+
+    .proyecto_descripcion {
+
+        width: 90%;
+
+        margin: 70px auto;
+
+        gap: 35px;
+    }
+
+
+    /* =========================
+       TÍTULO
+    ========================= */
+
+    .proyecto_titulo h1 {
+        font-size: 3rem;
+    }
+
+
+    /* Títulos específicos */
+
+    .proyecto_titulo_a_tus_pies img {
+        width: 85%;
+        max-width: 450px;
+        margin-left: 0;
+    }
+
+    .proyecto_titulo_ferrari img {
+        width: 85%;
+        max-width: 450px;
+        margin-left: 0;
+    }
+
+    .proyecto_titulo_la_ultima_mano img {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .proyecto_titulo_nostalgia img {
+        width: 90%;
+        max-width: 500px;
+
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .proyecto_titulo_please_me img {
+        width: 80%;
+        max-width: 400px;
+
+        margin-bottom: 0;
+    }
+
+    .proyecto_titulo_take_my_mind img {
+        width: 80%;
+        max-width: 400px;
+
+        margin-left: 0;
+    }
+
+    .proyecto_titulo_take_on_me img {
+        width: 70%;
+        max-width: 350px;
+
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .proyecto_titulo_tasm2 img {
+        width: 90%;
+        max-width: 450px;
+    }
+
+    .proyecto_titulo_verstappen_v_hamilton img {
+        width: 85%;
+        max-width: 400px;
+
+        margin: 0;
+    }
+
+
+    /* =========================
+       SUBTÍTULOS
+    ========================= */
+
+    .proyecto_subtitulo_a_tus_pies,
+    .proyecto_subtitulo_ferrari,
+    .proyecto_subtitulo_la_ultima_mano,
+    .proyecto_subtitulo_nostalgia,
+    .proyecto_subtitulo_please_me,
+    .proyecto_subtitulo_take_my_mind,
+    .proyecto_subtitulo_take_on_me,
+    .proyecto_subtitulo_tasm2,
+    .proyecto_subtitulo_verstappen_v_hamilton {
+
+        margin-top: 10px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .proyecto_subtitulo_a_tus_pies h2,
+    .proyecto_subtitulo_ferrari h2,
+    .proyecto_subtitulo_la_ultima_mano h2,
+    .proyecto_subtitulo_nostalgia h2,
+    .proyecto_subtitulo_please_me h2,
+    .proyecto_subtitulo_take_my_mind h2,
+    .proyecto_subtitulo_take_on_me h2,
+    .proyecto_subtitulo_tasm2 h2,
+    .proyecto_subtitulo_verstappen_v_hamilton h2 {
+
+        font-size: 0.8rem;
+
+        letter-spacing: 1.5px;
+
+        line-height: 1.4;
+    }
+
+
+    /* =========================
+       DESCRIPCIONES
+    ========================= */
+
+    .proyecto_descripcion_1,
+    .proyecto_descripcion_2,
+    .proyecto_descripcion_3,
+    .proyecto_descripcion_4,
+    .proyecto_descripcion_5 {
+
+        width: 100%;
+        max-width: none;
+    }
+
+    .proyecto_descripcion h2 {
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+
+        font-weight: 300;
+    }
+
+
+    /* =========================
+       LISTAS
+    ========================= */
+
+    .proyecto_lista_1,
+    .proyecto_lista_2,
+    .proyecto_lista_3 {
+
+        padding-left: 18px;
+
+        width: 100%;
+    }
+
+    .proyecto_lista_1 h2,
+    .proyecto_lista_2 h2,
+    .proyecto_lista_3 h2 {
+
+        font-size: 0.85rem;
+
+        letter-spacing: 1.5px;
+    }
+
+    .proyecto_lista_1 li,
+    .proyecto_lista_2 li,
+    .proyecto_lista_3 li {
+
+        font-size: 0.9rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       VIDEO
+    ========================= */
+
+    .proyecto_video {
+
+        width: 100%;
+
+        height: 56.25vw;
+
+        min-height: 220px;
+        max-height: 500px;
+    }
+
+    .proyecto_video iframe {
+
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* =========================
+       BOTÓN PLAY
+    ========================= */
+
+    .video_boton {
+
+        width: 60px;
+        height: 60px;
+    }
+
+    .video_boton::before {
+
+        left: 24px;
+        top: 17px;
+
+        border-width: 13px 0 13px 21px;
+    }
+
+
+    /* =========================
+       LIGHTBOX
+    ========================= */
+
+    .lightbox img {
+
+        max-width: 95%;
+        max-height: 85%;
+
+        border-radius: 10px;
+    }
+
+    .close {
+
+        top: 15px;
+        right: 20px;
+
+        font-size: 35px;
+    }
+
+}
 /* =============================================================================DISENO GRAFICO============================================================================================ */
 
 .proyecto_imagenes_diseno {
@@ -1345,4 +2335,705 @@ nav{
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/* =======================================================================================CV============================================================================================== */
+
+/*====================================================
+                IMPORTAR FUENTE
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/*====================================================
+                VARIABLES
+====================================================*/
+
+:root{
+  --fondo:#0f0f0f;
+  --card:#0d1420;
+  --borde:#1d8fff;
+  --texto:#ffffff;
+  --texto2:#a7b3c7;
+}
+
+
+/*====================================================
+                RESET
+====================================================*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--fondo);
+}
+
+
+/*====================================================
+                CONTENEDOR
+====================================================*/
+
+.cv{
+  width:100%;
+  min-height:100vh;
+  padding:40px;
+  display:grid;
+  gap:22px;
+  grid-template-columns:
+    320px
+    1fr
+    1fr
+    420px;
+  grid-template-rows: auto;
+}
+
+
+/*====================================================
+                TARJETAS
+====================================================*/
+
+.card{
+  background:linear-gradient(
+      180deg,
+      #0f1725,
+      #0a111b
+  );
+  border:1px solid rgba(52,150,255,.18);
+  border-radius:18px;
+  padding:24px;
+  overflow:hidden;
+  position:relative;
+  transition:.35s;
+}
+
+
+/*====================================================
+            EFECTO HOVER
+====================================================*/
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#2d9cff;
+  box-shadow:
+      0 0 25px rgba(35,150,255,.18),
+      inset 0 0 0 1px rgba(35,150,255,.12);
+}
+
+
+/*====================================================
+            BRILLO SUPERIOR
+====================================================*/
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:2px;
+  background:
+  linear-gradient(
+      90deg,
+      transparent,
+      #29a0ff,
+      transparent
+  );
+  opacity:.6;
+}
+
+
+/*====================================================
+            POSICIÓN DE CADA TARJETA
+====================================================*/
+
+.nombre{
+  grid-column:1;
+  grid-row:1;
+}
+
+.experiencia{
+  grid-column:2;
+  grid-row:1;
+}
+
+.educacion{
+  grid-column:3;
+  grid-row:1;
+}
+
+.idiomas{
+  grid-column:4;
+  grid-row:1;
+  height:200px;
+}
+
+.intereses{
+  grid-column:4;
+  grid-row:1;
+  margin-top:210px;
+}
+
+.habilidades{
+  grid-column:1 / 3;
+  grid-row:2;
+}
+
+.software{
+  grid-column:3 / 5;
+  grid-row:2;
+}
+
+
+/*====================================================
+                NOMBRE
+====================================================*/
+
+.nombre{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.nombre h1{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+
+.nombre span:first-child{
+  font-size:72px;
+  color:white;
+  font-weight:300;
+}
+
+
+.nombre span:last-child{
+  margin-top:12px;
+  font-size:82px;
+  color:#2da5ff;
+  font-weight:700;
+}
+
+
+/*====================================================
+                TITULOS
+====================================================*/
+
+.titulo{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:28px;
+}
+
+
+.titulo img{
+  width:28px;
+  height:28px;
+}
+
+
+.titulo h2{
+  color:white;
+  font-size:28px;
+  font-weight:600;
+  letter-spacing:.5px;
+}
+
+
+/*====================================================
+                SCROLL
+====================================================*/
+
+.contenido-scroll{
+  flex: 1;
+  overflow-y:auto;
+  padding-right:12px;
+}
+
+
+/*====================================================
+            SCROLL PERSONALIZADO
+====================================================*/
+
+.contenido-scroll::-webkit-scrollbar{
+  width:7px;
+}
+
+.contenido-scroll::-webkit-scrollbar-track{
+  background:#101825;
+  border-radius:20px;
+}
+
+.contenido-scroll::-webkit-scrollbar-thumb{
+  background:#2c9fff;
+  border-radius:20px;
+}
+
+
+/*====================================================
+            RESPONSIVE
+====================================================*/
+
+@media(max-width:1500px){
+
+.cv{
+grid-template-columns:
+300px
+1fr
+1fr;
+
+grid-template-rows:
+auto
+auto
+auto
+auto;
+}
+
+.nombre{
+grid-column:1;
+}
+
+.experiencia{
+grid-column:2;
+}
+
+.educacion{
+grid-column:3;
+}
+
+.idiomas{
+grid-column:1;
+grid-row:2;
+margin:0;
+}
+
+.intereses{
+grid-column:2;
+grid-row:2;
+margin:0;
+}
+
+.habilidades{
+grid-column:1 / 3;
+grid-row:3;
+}
+
+.software{
+grid-column:3;
+grid-row:3;
+}
+
+}
+@media(max-width:1100px){
+.cv{
+display:flex;
+flex-direction:column;
+padding:20px;
+}
+
+.card{
+width:100%;
+}
+}
+
+/*====================================================
+            EXPERIENCIA / EDUCACIÓN
+====================================================*/
+
+.item{
+  position:relative;
+  padding-left:28px;
+  padding-bottom:30px;
+  margin-bottom:30px;
+  border-left:2px solid rgba(45,165,255,.18);
+}
+
+.item:last-child{
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.item::before{
+  content:"";
+  position:absolute;
+  left:-7px;
+  top:4px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#2da5ff;
+  box-shadow:0 0 12px rgba(45,165,255,.6);
+}
+
+.fecha{
+  display:inline-block;
+  margin-bottom:10px;
+  color:#2da5ff;
+  font-size:.85rem;
+  font-weight:600;
+  letter-spacing:.8px;
+}
+
+.item h3{
+  color:#fff;
+  font-size:1.15rem;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+.item h4{
+  color:#c4d3e8;
+  font-size:.95rem;
+  margin-bottom:12px;
+  font-weight:500;
+}
+
+.item p{
+  color:#8f9caf;
+  line-height:1.7;
+  font-size:.9rem;
+}
+
+
+/*====================================================
+                    IDIOMAS
+====================================================*/
+
+.lista-idiomas{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.idioma{
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  gap:10px;
+}
+
+.idioma span{
+  color:white;
+  font-size:15px;
+  font-weight:500;
+}
+
+.barra{
+  width:100%;
+  height:8px;
+  border-radius:30px;
+  overflow:hidden;
+  background:#162231;
+}
+
+.nivel{
+  height:100%;
+  border-radius:30px;
+  background:linear-gradient(
+      90deg,
+      #2da5ff,
+      #71c8ff
+    );
+}
+
+
+/*====================================================
+                    INTERESES
+====================================================*/
+
+.intereses ul{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.intereses li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:white;
+  padding:12px 16px;
+  border-radius:12px;
+  background:#121d2b;
+  border:1px solid rgba(255,255,255,.05);
+  transition:.3s;
+}
+
+.intereses li::before{
+  content:"✦";
+  color:#2da5ff;
+  font-size:15px;
+}
+
+.intereses li:hover{
+  transform:translateX(6px);
+  border-color:#2da5ff;
+  background:#162536;
+}
+
+
+/*====================================================
+            EFECTO DE ENTRADA
+====================================================*/
+
+.card{
+  animation:aparecer .7s ease;
+}
+
+@keyframes aparecer{
+  from{
+      opacity:0;
+       transform:translateY(25px);
+  }
+  to{
+      opacity:1;
+      transform:translateY(0);
+    }
+}
+
+
+/*====================================================
+            SCROLL MÁS BONITO
+====================================================*/
+
+.contenido-scroll{
+  scroll-behavior:smooth;
+}
+
+.contenido-scroll::-webkit-scrollbar-thumb:hover{
+  background:#5bbcff;
+}
+
+/*====================================================
+                HABILIDADES
+====================================================*/
+
+.grid-habilidades{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:10px;
+}
+
+.habilidad{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  background:#121d2b;
+  border:1px solid rgba(255,255,255,.05);
+  border-radius:16px;
+  min-height:140px;
+  transition:.35s;
+  cursor:pointer;
+}
+
+.habilidad:hover{
+  transform:translateY(-8px);
+  border-color:#2da5ff;
+  box-shadow:0 10px 25px rgba(45,165,255,.18);
+  background:#182638;
+}
+
+.habilidad img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  filter:brightness(0) invert(1);
+  transition:.35s;
+}
+
+.habilidad:hover img{
+  transform:scale(1.12);
+}
+
+.habilidad span{
+  color:white;
+  text-align:center;
+  font-size:.95rem;
+  line-height:1.4;
+  padding:0 8px;
+}
+
+
+/*====================================================
+                    SOFTWARE
+====================================================*/
+
+.software{
+  display:flex;
+  flex-direction:column;
+}
+
+.programa{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:22px;
+}
+
+.programa:last-child{
+  margin-bottom:0;
+}
+
+.programa span{
+  display:block;
+  margin-bottom:8px;
+  color:white;
+  font-size:15px;
+  font-weight:500;
+}
+
+.programa .barra{
+  width:100%;
+  height:10px;
+  background:#162231;
+  border-radius:50px;
+  overflow:hidden;
+  position:relative;
+  flex: 1;
+}
+
+.programa .nivel{
+  height:100%;
+  border-radius:50px;
+  background:linear-gradient(
+      90deg,
+      #2da5ff,
+      #7fd1ff
+  );
+  transition:width .8s ease;
+  position:relative;
+}
+
+.programa .nivel::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0;
+  width:40px;
+  height:100%;
+  background:linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.45)
+  );
+}
+
+.info-programa{
+  width:260px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-shrink:0;
+}
+
+.info-programa img{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+}
+
+.info-programa span{
+  color:white;
+  font-size:15px;
+  font-weight:500;
+}
+
+
+/*====================================================
+            EFECTO GENERAL
+====================================================*/
+
+.card{
+  backdrop-filter:blur(12px);
+}
+
+
+/*====================================================
+            BORDE ILUMINADO
+====================================================*/
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  padding:1px;
+  background:linear-gradient(
+      135deg,
+      rgba(45,165,255,.25),
+      transparent,
+      rgba(45,165,255,.08)
+    );
+
+  -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+}
+
+
+/*====================================================
+            TRANSICIONES
+====================================================*/
+
+.card,
+.habilidad,
+.programa .nivel,
+.intereses li{
+  transition:.35s;
+}
+
+
+/*====================================================
+            RESPONSIVE
+====================================================*/
+
+@media(max-width:1400px){
+
+    .grid-habilidades{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:1000px){
+
+    .grid-habilidades{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+    .grid-habilidades{
+      grid-template-columns:1fr;
+   }
+}
+
+.oculto{
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.mostrar{
+  opacity:1;
+  transform:translateY(0);
+  transition:.8s ease;
 }

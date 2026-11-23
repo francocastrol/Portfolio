@@ -1634,170 +1634,6 @@ nav{
   cursor: pointer;
 }
 
-/* =======================================================================================
-   RESPONSIVE - CELULAR
-======================================================================================= */
-
-@media (max-width: 768px) {
-
-    /* =========================
-       CONTENEDOR GENERAL
-    ========================= */
-
-    body {
-        margin-left: 0;
-        overflow-x: hidden;
-    }
-
-
-    /* =========================
-       NAV
-    ========================= */
-
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 70px;
-
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        padding: 0 20px;
-
-        z-index: 1000;
-    }
-
-    .logo_nav {
-        width: 80px;
-        height: 80px;
-    }
-
-    .logo_nav img {
-        margin-top: 0;
-    }
-
-    .social_nav {
-        margin-left: auto;
-    }
-
-    .mail_nav {
-        width: 25px;
-        height: 25px;
-    }
-
-
-    /* =========================
-       TRABAJOS
-    ========================= */
-
-    .trabajos {
-        margin-top: 100px;
-        margin-bottom: 3rem;
-    }
-
-
-    /* =========================
-       FILAS
-    ========================= */
-
-    .trabajos_fila_1,
-    .trabajos_fila_2,
-    .trabajos_fila_3 {
-
-        padding: 0 20px;
-
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 25px;
-
-        margin-top: 0;
-        margin-bottom: 25px;
-    }
-
-
-    /* =========================
-       TARJETAS
-    ========================= */
-
-    .prueba_1,
-    .prueba_2,
-    .prueba_3,
-    .prueba_4,
-    .prueba_5,
-    .prueba_6,
-    .prueba_7,
-    .prueba_8,
-    .prueba_9 {
-
-        width: 100%;
-        max-width: 500px;
-
-        transform: none !important;
-    }
-
-
-    /* Evitamos que el hover de PC
-       genere problemas en celular */
-
-    .prueba_1:hover,
-    .prueba_2:hover,
-    .prueba_3:hover,
-    .prueba_4:hover,
-    .prueba_5:hover,
-    .prueba_6:hover,
-    .prueba_7:hover,
-    .prueba_8:hover,
-    .prueba_9:hover {
-
-        transform: none;
-    }
-
-
-    /* =========================
-       IMÁGENES DE FONDO
-    ========================= */
-
-    .prueba_1_fondo,
-    .prueba_2_fondo,
-    .prueba_3_fondo,
-    .prueba_4_fondo,
-    .prueba_5_fondo,
-    .prueba_6_fondo,
-    .prueba_7_fondo,
-    .prueba_8_fondo,
-    .prueba_9_fondo {
-
-        width: 100%;
-        height: auto;
-    }
-
-
-    /* =========================
-       TÍTULOS
-    ========================= */
-
-    .prueba_1_titulo,
-    .prueba_2_titulo,
-    .prueba_3_titulo,
-    .prueba_4_titulo,
-    .prueba_5_titulo,
-    .prueba_6_titulo,
-    .prueba_7_titulo,
-    .prueba_8_titulo,
-    .prueba_9_titulo {
-
-        width: 80%;
-        max-width: 400px;
-    }
-
-}
 
 /* =======================================================================================
    RESPONSIVE - PÁGINAS DE PROYECTOS
@@ -1987,6 +1823,14 @@ nav{
         margin: 0;
     }
 
+    .proyecto_titulo_como_la_flor img {
+        width: 85%;
+        max-width: 400px;
+
+        margin: 0;
+    }
+
+    
 
     /* =========================
        SUBTÍTULOS
@@ -3404,4 +3248,694 @@ body {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+/* =============================================================================CORRECCIÓN FINAL NAV - CELULARES============================================================================ */
+
+
+@media (max-width: 768px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 65px;
+
+        padding: 0 12px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 8px;
+        z-index: 1000;
+    }
+
+    /* LOGO */
+    .logo_nav {
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+    }
+
+    .logo_nav img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    /* MENÚ */
+    .menus_nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        flex: 1;
+        min-width: 0;
+
+        gap: clamp(7px, 2.2vw, 12px);
+        margin: 0;
+    }
+
+    .menus_nav a {
+        writing-mode: horizontal-tb;
+        transform: none;
+
+        font-size: clamp(10px, 3vw, 12px);
+        font-weight: 600;
+        letter-spacing: 0;
+
+        white-space: nowrap;
+    }
+
+    .menus_nav a:hover {
+        color: #00fffc;
+        transform: scale(1.03);
+    }
+
+    /* MAIL */
+    .social_nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+
+    .mail_nav {
+        width: 21px;
+        height: 21px;
+    }
+
+}
+
+/* =========================================
+   PRESENTACIÓN - RESPONSIVE CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* TÍTULO SOBRE MÍ */
+    .presentacion_info h1 {
+        text-align: center;
+    }
+
+    /* BOTÓN VER MÁS */
+    .btn_cv {
+        display: flex;
+        width: fit-content;
+        margin: 35px auto 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+/* =========================================
+   CV - CORRECCIONES PARA CELULARES
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR GENERAL */
+    .cv {
+        padding: 90px 20px 30px;
+    }
+
+    /* TARJETA DEL NOMBRE */
+    .nombre {
+        min-height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* TAMAÑO DEL NOMBRE */
+    .nombre span:first-child {
+        font-size: clamp(48px, 12vw, 64px);
+    }
+
+    .nombre span:last-child {
+        font-size: clamp(54px, 14vw, 72px);
+        margin-top: 8px;
+    }
+
+}
+
+
+/* =====================================================
+   VIDEOS MUSICALES - RESPONSIVE CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR GENERAL */
+    .trabajos {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        padding-top: 90px;
+    }
+
+    /* FILAS DE PROYECTOS */
+    .trabajos_fila_1,
+    .trabajos_fila_2,
+    .trabajos_fila_3,
+    .trabajos_fila_4 {
+
+        width: 100%;
+        padding: 0 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+        margin-top: 0;
+    }
+
+    .trabajos_fila_2,
+    .trabajos_fila_3,
+    .trabajos_fila_4 {
+        margin-top: 25px;
+    }
+
+    /* TARJETAS DE VIDEOS */
+    .p_take_my_mind,
+    .p_please_me,
+    .p_a_tus_pies,
+    .p_como_la_flor,
+    .p_caja,
+    .p_nostalgia,
+    .p_take_on_me,
+    .p_tasm2,
+    .p_la_ultima_mano,
+    .proximamente,
+    .p_verstappen_v_hamilton,
+    .p_ferrari_publicidad,
+    .p_sacro_exoesqueleto {
+
+        width: 100%;
+        max-width: 600px;
+        flex-shrink: 1;
+    }
+
+    /* IMÁGENES DE FONDO */
+    .p_take_my_mind_fondo,
+    .p_please_me_fondo,
+    .p_a_tus_pies_fondo,
+    .p_como_la_flor_fondo,
+    .p_caja_fondo,
+    .p_nostalgia_fondo,
+    .p_take_on_me_fondo,
+    .p_tasm2_fondo,
+    .p_la_ultima_mano_fondo,
+    .proximamente_fondo,
+    .p_verstappen_v_hamilton_fondo,
+    .p_ferrari_publicidad_fondo,
+    .p_sacro_exoesqueleto_fondo {
+
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* TÍTULOS SUPERPUESTOS */
+    .p_take_my_mind_titulo,
+    .p_please_me_titulo,
+    .p_a_tus_pies_titulo,
+    .p_como_la_flor_titulo,
+    .p_caja_titulo,
+    .p_nostalgia_titulo,
+    .p_take_on_me_titulo,
+    .p_tasm2_titulo,
+    .p_la_ultima_mano_titulo,
+    .proximamente_titulo,
+    .p_verstappen_v_hamilton_titulo,
+    .p_ferrari_publicidad_titulo,
+    .p_sacro_exoesqueleto_titulo {
+
+        width: 85%;
+        max-width: 100%;
+        height: auto;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+
+    /* EFECTOS */
+    .p_take_my_mind:hover,
+    .p_please_me:hover,
+    .p_a_tus_pies:hover,
+    .p_como_la_flor:hover,
+    .p_caja:hover,
+    .p_nostalgia:hover,
+    .p_take_on_me:hover,
+    .p_tasm2:hover,
+    .p_la_ultima_mano:hover,
+    .proximamente:hover,
+    .p_verstappen_v_hamilton:hover,
+    .p_ferrari_publicidad:hover,
+    .p_sacro_exoesqueleto:hover {
+
+        transform: none;
+    }
+
+    .trabajos img {
+        border-radius: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   TRAILERS - RESPONSIVE CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR GENERAL */
+    .trabajos {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        padding-top: 90px;
+    }
+
+    /* FILA DE TRAILERS */
+    .trabajos_fila_1 {
+        width: 100%;
+        padding: 0 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+        margin-top: 0;
+    }
+
+    /* TARJETAS */
+    .p_nostalgia,
+    .p_take_on_me,
+    .p_tasm2 {
+
+        width: 100%;
+        max-width: 600px;
+        flex-shrink: 1;
+    }
+
+    /* IMÁGENES DE FONDO */
+    .p_nostalgia_fondo,
+    .p_take_on_me_fondo,
+    .p_tasm2_fondo {
+
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* TÍTULOS SUPERPUESTOS */
+    .p_nostalgia_titulo,
+    .p_take_on_me_titulo,
+    .p_tasm2_titulo {
+
+        width: 85%;
+        max-width: 100%;
+        height: auto;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+
+    /* EFECTOS */
+    .p_nostalgia:hover,
+    .p_take_on_me:hover,
+    .p_tasm2:hover {
+
+        transform: none;
+    }
+
+    /* BORDES */
+    .trabajos img {
+        border-radius: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   CORTOMETRAJES - RESPONSIVE CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR GENERAL */
+    .trabajos {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        padding-top: 90px;
+    }
+
+    /* FILA */
+    .trabajos_fila_1 {
+        width: 100%;
+        padding: 0 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+        margin-top: 0;
+    }
+
+    /* PROYECTO */
+    .p_la_ultima_mano {
+        width: 100%;
+        max-width: 600px;
+        flex-shrink: 1;
+    }
+
+    /* IMAGEN DE FONDO */
+    .p_la_ultima_mano_fondo {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* TÍTULO SUPERPUESTO */
+    .p_la_ultima_mano_titulo {
+        width: 85%;
+        max-width: 100%;
+        height: auto;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+
+    /* EFECTO */
+    .p_la_ultima_mano:hover {
+        transform: none;
+    }
+
+    /* BORDES */
+    .trabajos img {
+        border-radius: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   OTROS VIDEOS - RESPONSIVE CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR GENERAL */
+    .trabajos {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        padding-top: 90px;
+    }
+
+    /* FILA DE PROYECTOS */
+    .trabajos_fila_1 {
+        width: 100%;
+        padding: 0 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+        margin-top: 0;
+    }
+
+    /* TARJETAS */
+    .p_verstappen_v_hamilton,
+    .p_ferrari_publicidad,
+    .p_sacro_exoesqueleto {
+
+        width: 100%;
+        max-width: 600px;
+        flex-shrink: 1;
+    }
+
+    /* IMÁGENES DE FONDO */
+    .p_verstappen_v_hamilton_fondo,
+    .p_ferrari_publicidad_fondo,
+    .p_sacro_exoesqueleto_fondo {
+
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* TÍTULOS SUPERPUESTOS */
+    .p_verstappen_v_hamilton_titulo,
+    .p_ferrari_publicidad_titulo,
+    .p_sacro_exoesqueleto_titulo {
+
+        width: 85%;
+        max-width: 100%;
+        height: auto;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+
+    /* EFECTOS */
+    .p_verstappen_v_hamilton:hover,
+    .p_ferrari_publicidad:hover,
+    .p_sacro_exoesqueleto:hover {
+
+        transform: none;
+    }
+
+    /* BORDES */
+    .trabajos img {
+        border-radius: 20px;
+    }
+
+}
+
+/* ==========================================
+   DISEÑO GRÁFICO - VERSIÓN CELULAR
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR GENERAL */
+    .trabajos {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        padding-top: 90px;
+    }
+
+    /* FILAS DE PROYECTOS */
+    .trabajos_fila_1,
+    .trabajos_fila_2 {
+        width: 100%;
+        padding: 0 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-top: 0;
+    }
+
+    .trabajos_fila_2 {
+        margin-top: 25px;
+    }
+
+    /* TARJETAS */
+    .p_nyfc,
+    .p_f1,
+    .p_la_salle,
+    .p_prema,
+    .p_la_salle_fc {
+        width: 100%;
+        max-width: 600px;
+        flex-shrink: 1;
+    }
+
+    /* IMÁGENES DE FONDO */
+    .p_nyfc_fondo,
+    .p_f1_fondo,
+    .p_la_salle_fondo,
+    .p_prema_fondo,
+    .p_la_salle_fc_fondo {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* LOGOS Y TÍTULOS */
+    .p_nyfc_titulo,
+    .p_f1_titulo,
+    .p_la_salle_titulo,
+    .p_prema_titulo,
+    .p_la_salle_fc_titulo {
+        width: 85%;
+        max-width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+
+    /* DESACTIVAR EFECTO HOVER EN CELULAR */
+    .p_nyfc:hover,
+    .p_f1:hover,
+    .p_la_salle:hover,
+    .p_prema:hover,
+    .p_la_salle_fc:hover {
+        transform: none;
+    }
+
+}
+
+/* ==========================================
+   PROYECTO DISEÑO GRÁFICO - CELULAR
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR GENERAL */
+    .proyecto_imagenes_diseno {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 35px auto;
+        gap: 15px;
+        box-sizing: border-box;
+    }
+
+    /* FILAS DE IMÁGENES */
+    .proyecto_imagenes_fila_1,
+    .proyecto_imagenes_fila_2,
+    .proyecto_imagenes_fila_3,
+    .proyecto_imagenes_fila_4 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        box-sizing: border-box;
+    }
+
+    /* IMÁGENES */
+    .proyecto_imagenes_diseno img {
+        width: calc((100% - 12px) / 2);
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        box-sizing: border-box;
+    }
+
+    /* ÚLTIMA FILA */
+    .proyecto_imagenes_fila_4 img {
+        width: 65%;
+        max-width: 100%;
+    }
+
+    /* DESACTIVAR ANIMACIÓN HOVER */
+    .proyecto_imagenes_diseno img:hover {
+        transform: none;
+    }
+
+}
+
+/* EVITAR DESBORDAMIENTO HORIZONTAL */
+@media (max-width: 480px) {
+
+    .proyecto_imagenes_diseno {
+        padding: 0 12px;
+    }
+
+    .proyecto_imagenes_diseno img {
+        width: calc((100% - 12px) / 2);
+    }
+
+    .proyecto_imagenes_fila_4 img {
+        width: 65%;
+    }
+}
+/* ==========================================
+   TÍTULO F1 - VERSIÓN CELULAR
+========================================== */
+
+@media (max-width: 768px) {
+
+    .proyecto_titulo_f1,
+    .proyecto_titulo_la_salle_fc,
+    .proyecto_titulo_la_salle,
+    .proyecto_titulo_nyfc,
+    .proyecto_titulo_prema{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .proyecto_titulo_f1 img,
+    .proyecto_titulo_la_salle_fc img,
+    .proyecto_titulo_la_salle img,
+    .proyecto_titulo_nyfc img,
+    .proyecto_titulo_prema img{
+        width: 75%;
+        max-width: 350px;
+        height: auto;
+        margin: 90px 0 20px;
+    }
+
+    .proyecto_subtitulo_f1,
+    .proyecto_subtitulo_la_salle_fc,
+    .proyecto_subtitulo_la_salle,
+    .proyecto_subtitulo_nyfc,
+    .proyecto_subtitulo_prema {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .proyecto_subtitulo_f1 h2,
+    .proyecto_subtitulo_la_salle_fc h2,
+    .proyecto_subtitulo_la_salle h2,
+    .proyecto_subtitulo_nyfc h2,
+    .proyecto_subtitulo_prema h2 {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
 }

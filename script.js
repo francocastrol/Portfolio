@@ -69,3 +69,19 @@ if (imagenes.length > 0) {
     });
 
 }
+
+
+
+// PANTALLA DE CARGA
+
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("loader");
+
+    if (loader) {
+        setTimeout(function () {
+            loader.classList.add("oculto");
+        }, 500);
+    }
+
+});

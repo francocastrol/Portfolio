@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como La Flor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./IMAGENES/NAV/LOGITO.png">
+</head>
+<body>
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Como La Flor/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Como La Flor/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Como La Flor/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Como La Flor/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Como La Flor/IMG5.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Como La Flor/IMG6.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Como La Flor/IMG7.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_como_la_flor">
+            <img src="./IMAGENES/AUDIOVISUAL/Como La Flor titulo.png" alt="">
+            <div class="proyecto_subtitulo_como_la_flor">
+                <h2>Video musical</h2>
+                <h2>Montaje</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Como La Flor es un videoclip musical realizado para la artista Yenny Ortiz. La propuesta combina la interpretación de la artista en un estudio con escenas ambientadas en una plaza. A través de dos espacios y momentos visuales diferentes, el proyecto construye el relato de una separación amorosa, mostrando fragmentos de una relación pasada como si fueran recuerdos que acompañan la canción.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>La propuesta visual utiliza el contraste entre la interpretación musical en el estudio y las escenas de la plaza para reforzar el carácter nostálgico de la historia. Estas últimas funcionan como flashbacks que representan los recuerdos de la relación y el distanciamiento de la pareja, acompañando el desarrollo emocional de la canción.</h2>
+        </div>
+        <div class="proyecto_descripcion_3">
+            <h2>Dentro del proyecto participé como montajista, estando a cargo de la edición audiovisual y del desarrollo de los efectos visuales de VHS, utilizados para aportar una estética de imagen analógica y reforzar la sensación de recuerdos del pasado. Todo el proceso de postproducción fue realizado en Adobe Premiere Pro.</h2>
+        </div>
+        <div class="proyecto_descripcion_4">
+            <h2>El videoclip fue producido por Kova Producciones para la artista Yenny Ortiz, con una propuesta audiovisual que combina interpretación musical y narrativa visual para trasladar la historia de la canción a la pantalla.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Montaje</li>
+                <li>Efectos visuales (VFX)</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Cliente: Yenny Ortiz</li>
+                <li>Productora: Kova Studio</li>
+                <li>Fecha: Septiembre de 2026</li>
+                <li>Categoria: Video musical</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/a4cy_eUn-9s/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/a4cy_eUn-9s?si=737jRQYTFeJrSKaB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

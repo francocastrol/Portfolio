@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacro Exoesqueleto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./IMAGENES/NAV/LOGITO.png">
+</head>
+<body>
+
+    <nav>
+        <div class="logo_nav">
+            <a href="index.html">
+                <img src="./IMAGENES/NAV/FC (LOGO1).png" alt="Logo blanco">
+                <img src="./IMAGENES/NAV/FC (LOGO1) CELESTE.png" alt="Logo celeste">
+            </a>
+        </div>
+
+        <div class="social_nav">
+            <div class="mail_nav">
+                <a href="mailto:tuemail@gmail.com">
+                    <img src="./IMAGENES/NAV/MAIL.png" alt="Email">
+                    <img src="./IMAGENES/NAV/MAIL CELESTE.png" alt="Email celeste">
+                </a>    
+            </div>
+        </div>
+    </nav> 
+
+    <div class="proyecto_imagenes" data-reveal>
+        <div class="carousel">
+            <button class="carousel_btn prev">&#10094;</button>
+            <div class="carousel_track">
+                <img src="./IMAGENES/AUDIOVISUAL/Sacro Exoesqueleto/IMG1.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Sacro Exoesqueleto/IMG2.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Sacro Exoesqueleto/IMG3.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Sacro Exoesqueleto/IMG4.jpg" class="carousel_img">
+                <img src="./IMAGENES/AUDIOVISUAL/Sacro Exoesqueleto/IMG5.jpg" class="carousel_img">
+            </div>
+            <button class="carousel_btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox_img" id="lightbox_img">
+    </div>
+
+    <div class="proyecto_descripcion" >
+        <div class="proyecto_titulo_sacro_exoesqueleto">
+            <img src="./IMAGENES/AUDIOVISUAL/Sacro Exoesqueleto titulo.png" alt="">
+            <div class="proyecto_subtitulo_sacro_exoesqueleto">
+                <h2>Fashion film</h2>
+                <h2>Montaje - VFX</h2>
+            </div>
+        </div>
+        <div class="proyecto_descripcion_1" data-reveal>
+            <h2>Este proyecto es un fashion film desarrollado en el marco de un trabajo universitario para @loliviaportfolio. La pieza propone una exploración audiovisual del universo de la moda, utilizando la imagen, el montaje y el tratamiento visual como herramientas para construir una identidad estética y transmitir el concepto de la propuesta.</h2>
+        </div>
+        <div class="proyecto_descripcion_2" data-reveal>
+            <h2>El material fotográfico y audiovisual fue realizado por @ph.ccam, a partir del cual trabajé en la construcción y edición de la pieza final, buscando mantener una continuidad visual y reforzar la propuesta estética del proyecto.</h2>
+        </div>
+        <div class="proyecto_lista_1">
+            <h2>Mi participacion</h2>
+            <ul>
+                <li>Montaje</li>
+                <li>Corrección de color</li>
+                <li>Limpieza de planos y eliminación de personas del fondo</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_2">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>Adobe Premiere Pro</li>
+                <li>Adobe After Effects</li>
+            </ul>
+        </div>
+        <div class="proyecto_lista_3">
+            <h2>Informacion del proyecto</h2>
+            <ul>
+                <li>Tipo: Trabajo universitario</li>
+                <li>Categoría: Fashion Film</li>
+                <li>Cliente: @loliviaportfolio</li>
+                <li>Fecha: Octubre 2026</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="proyecto_video" onclick="loadVideo(this)" >
+        <img 
+            class="video_thumbnail" 
+            src="https://img.youtube.com/vi/FNPJVTK9dvc/maxresdefault.jpg" title=""
+            alt="Video preview"
+            >
+        <div class="video_boton"></div>
+    </div>
+
+    <script>
+        function loadVideo(element) {
+            element.innerHTML = `
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FNPJVTK9dvc?si=wuTLp1EPfbkmgSvd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+
+    <script>
+        const track = document.querySelector(".carousel_track");
+        const images = document.querySelectorAll(".carousel_img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+         nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox_img");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

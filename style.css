@@ -11,7 +11,9 @@ body {
   margin-left: 100px;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 /* =======================================================================================INDEX=================================================================================================== */
 
 /*_________________________________________________________________________________________NAV_____________________________________________________________________________________________*/
@@ -770,9 +772,16 @@ nav{
   gap: 30px;
   margin-top: 3rem;
 }
+.trabajos_fila_4 {
+  padding: 0 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 3rem;
+}
 
 
-.prueba_1 {
+.p_take_my_mind {
   position: relative;
   width: 600px;
   overflow: hidden;
@@ -780,13 +789,13 @@ nav{
 }
 
 
-.prueba_1_fondo {
+.p_take_my_mind_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_1_titulo {
+.p_take_my_mind_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -794,29 +803,29 @@ nav{
   width: 500px;
 }
 
-.prueba_1:hover {
+.p_take_my_mind:hover {
   transform: scale(1.05);
 }
 
-.prueba_1:hover .prueba_1_fondo {
+.p_take_my_mind:hover .p_take_my_mind_fondo {
   filter: grayscale(100%);
 }
 
 
-.prueba_2 {
+.p_please_me {
   position: relative;
   width: 600px;
   overflow: hidden;
   transition: transform 0.4s ease;
 }
 
-.prueba_2_fondo {
+.p_please_me_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_2_titulo {
+.p_please_me_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -824,28 +833,28 @@ nav{
   width: 500px;
 }
 
-.prueba_2:hover {
+.p_please_me:hover {
   transform: scale(1.05);
 }
 
-.prueba_2:hover .prueba_2_fondo {
+.p_please_me:hover .p_please_me_fondo {
   filter: grayscale(100%);
 }
 
-.prueba_3 {
+.p_a_tus_pies {
   position: relative;
   width: 600px;
   overflow: hidden;
   transition: transform 0.4s ease;
 }
 
-.prueba_3_fondo {
+.p_a_tus_pies_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_3_titulo {
+.p_a_tus_pies_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -853,15 +862,15 @@ nav{
   width: 550px;
 }
 
-.prueba_3:hover {
+.p_a_tus_pies:hover {
   transform: scale(1.05);
 }
 
-.prueba_3:hover .prueba_3_fondo {
+.p_a_tus_pies:hover .p_a_tus_pies_fondo {
   filter: grayscale(100%);
 }
 
-.prueba_4 {
+.p_como_la_flor {
   position: relative;
   width: 600px;
   overflow: hidden;
@@ -869,13 +878,102 @@ nav{
 }
 
 
-.prueba_4_fondo {
+.p_como_la_flor_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_4_titulo {
+.p_como_la_flor_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_como_la_flor:hover {
+  transform: scale(1.05);
+}
+
+.p_como_la_flor:hover .p_como_la_flor_fondo {
+  filter: grayscale(100%);
+}
+
+
+.p_caja {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_caja_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_caja_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_caja:hover {
+  transform: scale(1.05);
+}
+
+.p_caja:hover .p_caja_fondo {
+  filter: grayscale(100%);
+}
+
+.p_nostalgia {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_nostalgia_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_nostalgia_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+}
+
+.p_nostalgia:hover {
+  transform: scale(1.05);
+}
+
+.p_nostalgia:hover .p_nostalgia_fondo {
+  filter: grayscale(100%);
+}
+
+.p_take_on_me {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+
+.p_take_on_me_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_take_on_me_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -883,58 +981,29 @@ nav{
   width: 450px;
 }
 
-.prueba_4:hover {
+.p_take_on_me:hover {
   transform: scale(1.05);
 }
 
-.prueba_4:hover .prueba_4_fondo {
+.p_take_on_me:hover .p_take_on_me_fondo {
   filter: grayscale(100%);
 }
 
 
-.prueba_5 {
+.p_tasm2 {
   position: relative;
   width: 600px;
   overflow: hidden;
   transition: transform 0.4s ease;
 }
 
-.prueba_5_fondo {
+.p_tasm2_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_5_titulo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-}
-
-.prueba_5:hover {
-  transform: scale(1.05);
-}
-
-.prueba_5:hover .prueba_5_fondo {
-  filter: grayscale(100%);
-}
-
-.prueba_6 {
-  position: relative;
-  width: 600px;
-  overflow: hidden;
-  transition: transform 0.4s ease;
-}
-
-.prueba_6_fondo {
-  width: 100%;
-  display: block;
-  transition: filter 0.4s ease;
-}
-
-.prueba_6_titulo {
+.p_tasm2_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -942,15 +1011,44 @@ nav{
   width: 500px;
 }
 
-.prueba_6:hover {
+.p_tasm2:hover {
   transform: scale(1.05);
 }
 
-.prueba_6:hover .prueba_6_fondo {
+.p_tasm2:hover .p_tasm2_fondo {
   filter: grayscale(100%);
 }
 
-.prueba_7 {
+.p_la_ultima_mano {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_la_ultima_mano_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_la_ultima_mano_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_la_ultima_mano:hover {
+  transform: scale(1.05);
+}
+
+.p_la_ultima_mano:hover .p_la_ultima_mano_fondo {
+  filter: grayscale(100%);
+}
+
+.proximamente {
   position: relative;
   width: 600px;
   overflow: hidden;
@@ -958,13 +1056,13 @@ nav{
 }
 
 
-.prueba_7_fondo {
+.proximamente_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_7_titulo {
+.proximamente_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -972,29 +1070,29 @@ nav{
   width: 450px;
 }
 
-.prueba_7:hover {
+.proximamente:hover {
   transform: scale(1.05);
 }
 
-.prueba_7:hover .prueba_7_fondo {
+.proximamente:hover .proximamente_fondo {
   filter: grayscale(100%);
 }
 
 
-.prueba_8 {
+.p_verstappen_v_hamilton {
   position: relative;
   width: 600px;
   overflow: hidden;
   transition: transform 0.4s ease;
 }
 
-.prueba_8_fondo {
+.p_verstappen_v_hamilton_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_8_titulo {
+.p_verstappen_v_hamilton_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1002,28 +1100,28 @@ nav{
   width: 500px;
 }
 
-.prueba_8:hover {
+.p_verstappen_v_hamilton:hover {
   transform: scale(1.05);
 }
 
-.prueba_8:hover .prueba_8_fondo {
+.p_verstappen_v_hamilton:hover .p_verstappen_v_hamilton_fondo {
   filter: grayscale(100%);
 }
 
-.prueba_9 {
+.p_ferrari_publicidad {
   position: relative;
   width: 600px;
   overflow: hidden;
   transition: transform 0.4s ease;
 }
 
-.prueba_9_fondo {
+.p_ferrari_publicidad_fondo {
   width: 100%;
   display: block;
   transition: filter 0.4s ease;
 }
 
-.prueba_9_titulo {
+.p_ferrari_publicidad_titulo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1031,135 +1129,42 @@ nav{
   width: 500px;
 }
 
-.prueba_9:hover {
+.p_ferrari_publicidad:hover {
   transform: scale(1.05);
 }
 
-.prueba_9:hover .prueba_9_fondo {
+.p_ferrari_publicidad:hover .p_ferrari_publicidad_fondo {
   filter: grayscale(100%);
 }
 
-/* =======================================================================================
-                         RESPONSIVE - AUDIOVISUAL
-======================================================================================= */
-
-@media (max-width: 768px){
-
-    /* =====================================================
-                         CONTENEDOR
-    ===================================================== */
-
-    .trabajos{
-        margin-top: 6rem;
-        margin-bottom: 3rem;
-        width: 100%;
-    }
-
-
-    /* =====================================================
-                       FILAS
-    ===================================================== */
-
-    .trabajos_fila_1,
-    .trabajos_fila_2,
-    .trabajos_fila_3{
-
-        padding: 0 20px;
-
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 25px;
-
-        margin-top: 0;
-    }
-
-
-    /* =====================================================
-                     TARJETAS / PROYECTOS
-    ===================================================== */
-
-    .prueba_1,
-    .prueba_2,
-    .prueba_3,
-    .prueba_4,
-    .prueba_5,
-    .prueba_6,
-    .prueba_7,
-    .prueba_8,
-    .prueba_9{
-
-        width: 100%;
-        max-width: 600px;
-
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
-                     IMAGEN DE FONDO
-    ===================================================== */
-
-    .prueba_1_fondo,
-    .prueba_2_fondo,
-    .prueba_3_fondo,
-    .prueba_4_fondo,
-    .prueba_5_fondo,
-    .prueba_6_fondo,
-    .prueba_7_fondo,
-    .prueba_8_fondo,
-    .prueba_9_fondo{
-
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-
-    /* =====================================================
-                     TÍTULOS
-    ===================================================== */
-
-    .prueba_1_titulo,
-    .prueba_2_titulo,
-    .prueba_3_titulo,
-    .prueba_4_titulo,
-    .prueba_5_titulo,
-    .prueba_6_titulo,
-    .prueba_7_titulo,
-    .prueba_8_titulo,
-    .prueba_9_titulo{
-
-        width: 80%;
-        max-width: 500px;
-    }
-
-
-    /* =====================================================
-                         HOVER
-    ===================================================== */
-
-    .prueba_1:hover,
-    .prueba_2:hover,
-    .prueba_3:hover,
-    .prueba_4:hover,
-    .prueba_5:hover,
-    .prueba_6:hover,
-    .prueba_7:hover,
-    .prueba_8:hover,
-    .prueba_9:hover{
-
-        transform: scale(1.02);
-    }
-
+.p_sacro_exoesqueleto {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
 }
 
-html{
-    scroll-behavior: smooth;
+.p_sacro_exoesqueleto_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
 }
 
+.p_sacro_exoesqueleto_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+}
+
+.p_sacro_exoesqueleto:hover {
+  transform: scale(1.05);
+}
+
+.p_sacro_exoesqueleto:hover .p_sacro_exoesqueleto_fondo {
+  filter: grayscale(100%);
+}
 
 /*__________________________________________________________________________________PROYECTOS AUDIOVISUAL__________________________________________________________________________________*/
 
@@ -1401,6 +1406,48 @@ html{
 }
 
 .proyecto_subtitulo_verstappen_v_hamilton h2{
+    font-size: .95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.proyecto_titulo_como_la_flor img{
+  width: 580px;
+  margin-left: -2rem;
+  margin-top: 3rem;
+}
+
+.proyecto_subtitulo_como_la_flor {
+    display: flow-root;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.proyecto_subtitulo_como_la_flor h2{
+    font-size: .95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.proyecto_titulo_sacro_exoesqueleto img{
+  width: 750px;
+  margin-left: -2rem;
+  margin-top: -2rem;
+}
+
+.proyecto_subtitulo_sacro_exoesqueleto {
+    display: flow-root;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: -8rem;
+}
+
+.proyecto_subtitulo_sacro_exoesqueleto h2{
     font-size: .95rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -2099,6 +2146,151 @@ html{
 
 }
 /* =============================================================================DISENO GRAFICO============================================================================================ */
+
+.p_nyfc {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_nyfc_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_nyfc_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_nyfc:hover {
+  transform: scale(1.05);
+}
+
+.p_nyfc:hover .p_nyfc_fondo {
+  filter: grayscale(100%);
+}
+
+.p_f1 {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_f1_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_f1_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_f1:hover {
+  transform: scale(1.05);
+}
+
+.p_f1:hover .p_f1_fondo {
+  filter: grayscale(100%);
+}
+
+.p_la_salle {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_la_salle_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_la_salle_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_la_salle:hover {
+  transform: scale(1.05);
+}
+
+.p_la_salle:hover .p_la_salle_fondo {
+  filter: grayscale(100%);
+}
+
+.p_prema {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_prema_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_prema_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_prema:hover {
+  transform: scale(1.05);
+}
+
+.p_prema:hover .p_prema_fondo {
+  filter: grayscale(100%);
+}
+
+.p_la_salle_fc {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.p_la_salle_fc_fondo {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.p_la_salle_fc_titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.p_la_salle_fc:hover {
+  transform: scale(1.05);
+}
+
+.p_la_salle_fc:hover .p_la_salle_fc_fondo {
+  filter: grayscale(100%);
+}
 
 .proyecto_imagenes_diseno {
     width: 100%;
@@ -3026,4 +3218,190 @@ width:100%;
   opacity:1;
   transform:translateY(0);
   transition:.8s ease;
+}
+
+/* =============================================================================VERTICALES============================================================================================ */
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.reels-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+
+/* CADA PROYECTO */
+
+.reel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+
+    padding: 0 0 75px;
+    margin-bottom: 75px;
+
+    border-bottom: 1px solid #292929;
+}
+
+
+/* VIDEO */
+
+.reel-video {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    background-color: #171717;
+    border-radius: 4px;
+}
+
+.reel-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* INFORMACIÓN */
+
+.reel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.reel-info h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.reel-category {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #999999;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.reel-info p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #b5b5b5;
+    max-width: 400px;
+}
+
+
+/* RESPONSIVE - CELULARES Y TABLETS */
+
+@media (max-width: 768px) {
+
+    .reels-container {
+        padding: 35px 20px;
+    }
+
+    .reel {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 45px;
+        padding-bottom: 45px;
+    }
+
+    .reel-video {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .reel-info h2 {
+        font-size: 26px;
+    }
+
+    .reel-info p {
+        font-size: 14px;
+    }
+
+}
+/* =============================================================================PANTALLA DE CARGA============================================================================ */
+
+
+/* ============================= */
+/* PANTALLA DE CARGA */
+/* ============================= */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+/* CÍRCULO GIRATORIO */
+
+.loader-spinner {
+    width: 48px;
+    height: 48px;
+
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-top: 3px solid #65c9e8;
+
+    border-radius: 50%;
+
+    animation: girar 0.8s linear infinite;
+}
+
+/* ANIMACIÓN */
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* CUANDO TERMINA DE CARGAR */
+
+.loader.oculto {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
